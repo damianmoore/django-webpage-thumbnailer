@@ -13,4 +13,4 @@ def get_thumbnail(request):
         if not is_new:
             thumbnail.save()
         return HttpResponseRedirect(thumbnail.uri)
-    return Http404('')
+    raise Http404('No url requested')
